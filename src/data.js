@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
-import "./index.html";
+import "./data.html";
+import MyForm from "./index.js";
 
 // import App from "./App";
 
@@ -14,14 +15,15 @@ class FormData extends React.Component {
       rating: "Select",
       description: ""
     };
+    this.myChangeHandler = this.myChangeHandler.bind(this);
   }
 
   myChangeHandler = event => {
     let nam = event.target.name;
-    let skills = event.target.value;
+    let skill = event.target.value;
     let rating = event.target.value;
     let text = event.target.value;
-    this.setState({ [nam]: skills, rating, text });
+    this.setState({ [nam]: skill, rating, text });
   };
   render() {
     const mystyle = {
@@ -54,6 +56,13 @@ class FormData extends React.Component {
             <td>7</td>
             <td>Intermediate</td>
           </tr>
+          <tr>
+            <td>{this.state.username}</td>
+            <td>{this.props.skill.join(", ")}</td>
+            <td>{this.props.rating}</td>
+            <td>{this.props.description}</td>
+          </tr>
+          <MyForm triggerChildUpdate={this.triggerChildUpdate} />
         </tbody>
       </table>
     );
@@ -61,3 +70,5 @@ class FormData extends React.Component {
 }
 
 ReactDOM.render(<FormData />, document.getElementById("candidate_data"));
+
+export default FormData;
