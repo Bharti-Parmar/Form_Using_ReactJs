@@ -1,11 +1,10 @@
-import React from "react";
-import "./styles.css";
+// import React from "react";
+// import "./styles.css";
+// // import { SkillProvider } from "./context";
+// // import Text from "./text.js";
 
-export default function App() {
-  return (
-    <div className="App">
-      <h1>Hello React</h1>
-      <h2>I am using React to make this data form!</h2>
-    </div>
-  );
-}
+// export default class App extends React.Component {
+//   return() {
+//     return <SkillProvider />;
+//   }
+// }

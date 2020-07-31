@@ -53,12 +53,7 @@ import "./styles.css";
 //   );
 // };
 
-// function skills() {
-// var username = document.getElementById("username");
-// var skill = document.getElementById("skill");
-// var rating = document.getElementById("rating");
-// var description = document.getElementById("description");
-// }
+// function
 
 class MyTable extends React.Component {
   constructor(props) {
@@ -240,8 +235,17 @@ class MyForm extends React.Component {
     });
   };
 
+  skills() {
+    // var username = document.getElementById("username");
+    // var skill = document.getElementById("skill");
+    // var rating = document.getElementById("rating");
+    // var description = document.getElementById("description");
+    console.log("my data");
+  }
+
   render() {
     const { username } = this.state;
+
     return (
       <div id="card">
         <h1 style={{ color: "Green" }}>Candidate Form</h1>
@@ -354,7 +358,7 @@ class MyForm extends React.Component {
               value="submit"
               className="button"
               style={{ margin: "20px" }}
-              // onClick={skills()}
+              onClick={() => this.skills()}
               // onClick={this.props.triggerChildUpdate}
             >
               Save
