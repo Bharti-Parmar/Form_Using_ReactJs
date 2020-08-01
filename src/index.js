@@ -58,15 +58,19 @@ import "./styles.css";
 class MyTable extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      username: "",
-      skills: "",
-      rating: null,
-      description: ""
-    };
+    this.skillId = 0;
+    // this.state = {
+    //   username: "",
+    //   skillList: [
+    //     // skill: "",
+    //     // rating: null,
+    //     // description: ""
+    //   ]
+    // };
     // this.setState({});
   }
   render() {
+    console.log(this.props);
     const mystyle = {
       color: "Red",
       margin: "10px",
@@ -92,7 +96,7 @@ class MyTable extends React.Component {
           </tr>
         </thead>
         <tbody id="data">
-          <tr>
+          {/* <tr>
             <td>Bharti</td>
             <td>Bootstrap</td>
             <td>7</td>
@@ -103,12 +107,12 @@ class MyTable extends React.Component {
             <td>Accounts</td>
             <td>6</td>
             <td>Beginner</td>
-          </tr>
+          </tr> */}
           <tr>
-            <td>{this.state.username}</td>
-            <td>{this.props.skill.join(", ")}</td>
-            <td>{this.props.rating}</td>
-            <td>{this.props.description}</td>
+            <td>{this.props.username}</td>
+            <td>{this.props.skillList}</td>
+            <td>{this.props.skillList}</td>
+            <td>{this.props.skillList}</td>
           </tr>
         </tbody>
       </table>
@@ -367,10 +371,8 @@ class MyForm extends React.Component {
         </div>
         <div id="table">
           <MyTable
-            username={this.state.name}
-            skill={["c", "cpp", "html"]}
-            rating={["3", "5", "7"]}
-            description="beginner, beginner, intermediate"
+            username={this.state.username}
+            skillList={this.state.skillList}
           />
           {/* <FormData /> */}
         </div>
